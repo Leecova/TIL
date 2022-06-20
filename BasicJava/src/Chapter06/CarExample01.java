@@ -1,10 +1,10 @@
 package Chapter06;
 
-public class CarExample {
+public class CarExample01 {
 	public static void main(String[] args) {
 		
 	//객체 생성
-		Car myCar = new Car();
+		Car01 myCar = new Car01();
 		
 		System.out.println("제작회사: " + myCar.company);
 		System.out.println("모델명: " + myCar.company);
