@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Exercise {
 	public static void main(String[] args) {
-		
+/*		
 		
 		
 		
@@ -22,7 +22,7 @@ public class Exercise {
 		} else if (player.equals("가위"&&computer.equals("보")) {
 			result = "플레이어 승리";
 		}
-		
+		*/
 			
 	}
 
