@@ -6,6 +6,14 @@ public class Teacher {
 		static int balance;
 		int salary;
 		
+		static void run(int salary) {
+			salary = 10;
+		}
+		
+		void runngin() {
+			balance = 10;
+		}
+		
 	/*	
 		public Teacher(int balance, int salary) {
 			this.balance = balance;
