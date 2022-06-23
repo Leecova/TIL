@@ -36,6 +36,7 @@ public class Car {
 	
 	public boolean speedUp(double speed) {
 		if (speed + this.speed >=0 && speed+this.speed <= MAX_SPEED) {
+			//this.speed+speed <0 || this.speed+speed>MAX_SPEED
 			this.speed += speed;
 			return true;
 		} else {
@@ -53,5 +54,9 @@ public class Car {
 		return String.format("%d", speed);
 	}
 
-	
+//	program speed: 목표속도 or 속도만큼 증감 
+	//@Override
+	//public String toString() {
+	//return "자동차 속력 =" +speed + ", 색상 =" + color;
+	//}
 }

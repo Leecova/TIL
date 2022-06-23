@@ -54,4 +54,4 @@ public class Plane {
 	public String toString() {
 		return String.format("%d", numberOfPlanes );
 	}
-}
+} // alt, shift , s -- 이용
