@@ -19,7 +19,7 @@ public class Student extends Human {
 	}
 	
 	public String toString() {
-		String.format("이름:" + name + ",나이:" + age, name, age);
+		String.format("이름:" + name + ",나이:" + age );
 		return super.toString() + ", 전공:" + major; 
 	}
 }

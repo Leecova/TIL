@@ -29,7 +29,8 @@ public class Human {
 	}
 	
 	public String toString() {
-		return String.format("이름:" + name + ",나이:" + age, name, age);
+		return String.format("이름:" + name + ",나이:" + age);
+		//return "이름: " + name + ", 나이:" + age;
 	}
 
 }
