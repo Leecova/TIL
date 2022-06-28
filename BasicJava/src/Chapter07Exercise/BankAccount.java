@@ -27,6 +27,13 @@ public class BankAccount {
 
 	public boolean transfer(int amount, BankAccount otherAccount) { 
 		//현재 계좌에서 amount 만큼 다른 계좌로 송금하는 메소드
+		/*
+		 * if(withdraw(amount)){
+		 * otherAccount.deposit(amount);
+		 * return true;
+		 * }
+		 * return false;
+		 */
 		if (withdraw(amount) == true) {
 			otherAccount.deposit(amount);
 			return true;
