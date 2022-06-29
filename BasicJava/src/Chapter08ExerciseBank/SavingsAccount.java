@@ -1,0 +1,20 @@
+package Chapter08ExerciseBank;
+
+public class SavingsAccount extends BankAccount {
+	// 필드
+	private double interestRate; // 이자율
+
+	// 생성자
+	public SavingsAccount(int balance, double interestRate) {
+		super(balance); // 초기화
+		this.interestRate = interestRate;
+	}
+	public String getAccountType() {
+		return "저축예금";
+	}
+
+	// 메소드
+	public void updateBalance(int period) {// 이자를 계산하여 잔액에 추가
+		balance += balance * interestRate * period; //this.balance
+	}
+}
