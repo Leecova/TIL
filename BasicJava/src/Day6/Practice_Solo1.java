@@ -8,10 +8,10 @@ public class Practice_Solo1 {
 		
 		// Strin~ num1 이렇게 안해도 되고 int num1 이런식으로 해도됨 why?
 		System.out.println("첫 번째 숫자를 입력하세요: ");
-		int num1 = scanner.nextLine();
+		String a = scanner.nextLine();
 		
 		System.out.println("두 번째 숫자를 입력하세요: ");
-		int num2 = scanner.nextLine();
+		String b = scanner.nextLine();
 		
 		
 		
@@ -21,16 +21,16 @@ public class Practice_Solo1 {
 		 * Math.abs를 ing Big ... 전체 괄호 앞에 썼었는데 뒤에 괄호에 쓰면됐음.
 		 */
 		
-		int Big = ((a + b) + Math.abs(a - b)) / 2;
-		int Small = ((a + b) - Math.abs(a - b)) / 2;
+	//	int Big = ((a + b) + Math.abs(a - b)) / 2;
+	//	int Small = ((a + b) - Math.abs(a - b)) / 2;
 		
 	
 		// 목과 나머지
-		int Quotient = Big / Small;
-		int Remainder = Big % Small;
+	//	int Quotient = Big / Small;
+	//	int Remainder = Big % Small;
 		
 		
-		System.out.println("큰 수를 작은 수로 나눈 몫은 " + Quotient + "이고, 나머지는 " + Remainder + "이다." );
+	//	System.out.println("큰 수를 작은 수로 나눈 몫은 " + Quotient + "이고, 나머지는 " + Remainder + "이다." );
 		
 		scanner.close();
 		

@@ -1,4 +1,4 @@
-package Chapter08;
+package chapter08;
 
 //클래스: 클래스> 상속 (extends)
 //인터페이스 : 클래스 > 구현(implements

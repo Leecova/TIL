@@ -1,4 +1,4 @@
-package Chapter08;
+package chapter08;
 
 public class SoundableExample {
 	private static void printSound(Soundable soundable) {

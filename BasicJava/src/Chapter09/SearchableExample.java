@@ -1,13 +1,14 @@
 package Chapter09;
 
+import chapter08.Searchable;
+
 public class SearchableExample {
 	public static void main(String[] args) {
-		new Searchable() {
+		Searchable s = new Searchable() {
 			public void search(String url) {
 				System.out.println(url);
 			}
-		}.search("홍길동");
-		// 람다?로 확장이 가능하다
+		};
+		s.search("홍길동");
 	}
-
 }

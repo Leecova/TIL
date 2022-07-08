@@ -1,4 +1,4 @@
-package Chapter08;
+package chapter08;
 
 public interface DataAccessObject {
 	public void select();

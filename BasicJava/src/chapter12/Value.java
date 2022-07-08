@@ -1,7 +1,10 @@
 package chapter12;
 
 public class Value {
-	private Object value = 100;
+	private Object value;
+	public Value(Object value) {
+		this.value = value;
+	}
 	public Object getValue() {
 		return value;
 	}
@@ -10,7 +13,6 @@ public class Value {
 	}
 	@Override
 	public String toString() {
-		return "Value [value=" + value + "]";
+		return String.format("Value [value=%s]", value);
 	}
-	
 }

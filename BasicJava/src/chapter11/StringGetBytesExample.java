@@ -1,5 +1,7 @@
 package chapter11;
 
+import java.io.UnsupportedEncodingException;
+
 public class StringGetBytesExample {
 	public static void main(String[] args) {
 		String str = "안녕하세요";

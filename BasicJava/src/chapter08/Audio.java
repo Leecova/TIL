@@ -1,4 +1,4 @@
-package Chapter08;
+package chapter08;
 
 public class Audio implements RemoteControl {
 	//필드
