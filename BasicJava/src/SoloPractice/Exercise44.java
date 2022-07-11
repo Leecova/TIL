@@ -8,9 +8,9 @@ public class Exercise44 {
 		//입력
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("가위 바위 보 게임!");
-		System.out.print("철수: ");
+		System.out.println("철수: ");
 		String cheol = scanner.nextLine();
-		System.out.print("영희: ");
+		System.out.println("영희: ");
 		String young = scanner.nextLine();
 		
 		//처리
