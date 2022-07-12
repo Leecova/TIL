@@ -25,7 +25,7 @@ public class MemoDAO {
 		// 2. StringBuilder로 문자열 결합
 		StringBuilder builder = new StringBuilder();
 		builder.append("SELECT");
-		builder.append("	id, "); // 컬러명이나 alias가 들어가야함
+		builder.append("	id, "); // 컬럼명이나 alias가 들어가야함
 		builder.append("	title, ");
 		builder.append("	contents,");
 		builder.append("	register_date, ");
@@ -112,10 +112,44 @@ public class MemoDAO {
 		connection.close();
 		return executeUpdate;
 	}
-	public int updateMemo() {
-		return 0;
+	public int updateMemo(MemoVO vo) throws SQLException {
+		DriverManager.registerDriver(new OracleDriver());
+		Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","pc23","java");
+		StringBuilder builder = new StringBuilder();
+		builder.append("UPDATE memo");
+		builder.append("	SET");
+		builder.append("	title = ?,");
+		builder.append("	contents = ?, ");
+		builder.append("	modify_date = SYSDATE ");
+		builder.append("WHERE");
+		builder.append("	id = ? ");
+		String sql = builder.toString();
+		PreparedStatement statement = connection.prepareStatement(sql);
+		statement.setString(1, vo.getTitle());
+		statement.setString(2, vo.getContents());
+		statement.setInt(3, vo.getId());
+		// insert, update, delete가 모두 executeUpdate()메소드를 호출
+		int executeUpdate = statement.executeUpdate();
+		statement.close();
+		connection.close();
+		return executeUpdate;
 	}
-	public int deletMemo() {
-		return 0;
+	public int deleteMemo(int deleteId) throws Exception{
+		DriverManager.registerDriver(new OracleDriver());
+		Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","pc23","java");
+		StringBuilder builder = new StringBuilder();
+		builder.append("DELETE FROM");
+		builder.append("	memo");
+		builder.append("WHERE");
+		builder.append("	id = ? ");
+	
+		String sql = builder.toString();
+		PreparedStatement statement = connection.prepareStatement(sql);
+		statement.setInt(1, deleteId);
+		// insert, update, delete가 모두 executeUpdate()메소드를 호출
+		int executeUpdate = statement.executeUpdate();
+		statement.close();
+		connection.close();
+		return executeUpdate;
 	}
 }

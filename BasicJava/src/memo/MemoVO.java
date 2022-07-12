@@ -18,6 +18,14 @@ public class MemoVO {
 	}
 	
 	
+	public MemoVO(int id, String title, String contents) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.contents = contents;
+	}
+
+
 	public MemoVO(int id, String title, String contents, Date registerDate, Date modifyDate) {
 		super();
 		this.id = id;
@@ -56,10 +64,19 @@ public class MemoVO {
 	public void setModifyDate(Date modifyDate) {
 		this.modifyDate = modifyDate;
 	}
+
+
 	@Override
 	public String toString() {
-		return "MemoVO [id=" + id + ", title=" + title + ", contents=" + contents + ", registerDate=" + registerDate
-				+ ", modifyDate=" + modifyDate + "]";
+		return String.format("%s\t%s\t%s\t%s\t%s\n", id, title,
+				contents, registerDate, modifyDate);
+	}
+
+
+	public MemoVO(String title, String contents) {
+		
+		this.title = title;
+		this.contents = contents;
 	}
 
 }
